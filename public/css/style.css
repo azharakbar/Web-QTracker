@@ -66,6 +66,14 @@
 	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
+#loginError{
+	position: absolute;
+	top:375px;
+	width:38%;
+	text-align: center;
+	color: #F44336 ; 
+}
+
 .footer{
 	position: absolute;
 	top: 600px;

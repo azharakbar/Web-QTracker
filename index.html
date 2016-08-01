@@ -12,83 +12,15 @@
 </head>
 
 <body>
+	
+	<div ng-view></div>
 
-	<div class = "row" ng-controller="test">
-		
-		<div class = "col s6">
-			<form action='/' autocomplete="off">
-				<div class="row" id="userNameDiv">
-					<div class="input-field col s9 offset-s4">
-						<i class="material-icons prefix">perm_identity</i>
-						<input id="userNameField" type="text" class="validate" ng-model="userfield">
-						<label for="userNameField">USERNAME</label>
-					</div>
-				</div>
-
-				<div class="row" id="passwordDiv">
-					<div class="input-field col s9 offset-s4">
-						<i class="material-icons prefix">lock</i>
-						<input id="passwordField" type="password" class="validate" ng-model="passfield">
-						<label for="passwordField">PASSWORD</label>
-					</div>
-				</div>
-
-		        <div class="row" id="forgotPwd">
-		       	 	<div class="col s4 offset-s10">
-		       	 		<a href="#" ><u>FORGOT PASSWORD</u></a>
-		       	 	</div>
-		        </div>	
-
-		        <div class="row" id="signInButtonDiv">
-		        	<div class="col s1 offset-s1" >
-		        		<button class="btn waves-effect waves-light" id="signInButton" ng-click="c()">SIGN IN</button>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div class = "col s6">
-			<div id="rectBox"></div>
-			<div class="row">
-				<img class="responsive-img" src = "./imgs/signin bg.png" id="grpBg">
-			</div>
-
-			<div class="row">
-				<div id = "msg" class="flow-text col s5">Device discovery made easy</div>
-			</div>
-
-		</div>
-
-		<div>{{user}}</div>
-		<div>{{pass}}</div>
-
-	</div>
-
-	<span class="row">
-		<div class="footer col s12">
-				MADE WITH <img src="./imgs/shape 1.png"> AT QBURST
-		</div>
-	</span>
-
-
-
- 		<script type="text/javascript" src="./js/jquery.min.js"></script>
-  		<script type="text/javascript" src="./js/materialize.min.js"></script>
-  		<script type="text/javascript" src="./controllers/login.js"></script>
-  		<script src="./js/angular.min.js"></script>
-
-  		<script>
-  			var application = angular.module('loginForm',[]) ;
-
-  			application.controller('test',function($scope){
-  				$scope.user = "" ;
-  				$scope.pass = "" ;
-
-  				$scope.c = function(){
-  					$scope.user = $scope.userfield ;
-  					$scope.pass = $scope.passfield ;
-  				}
-  			});
-  		</script>
-	</body>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/materialize.min.js"></script>
+	<script src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./controllers/login.js"></script>
+	<script type="text/javascript" src="./controllers/angular-route.js"></script>
+	
+</body>
 
 </html>
