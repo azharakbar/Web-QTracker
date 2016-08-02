@@ -6,13 +6,13 @@ app.config( function( $routeProvider ) {
 		templateUrl : 'loginPage.html' 
 	})
 	.when( '/success' , {
-		resolve : {
+/*		resolve : {
 			"check" : function( $location , $rootScope ){
 				if ( !$rootScope.loggedIn ){
 					$location.path('/') ;
 				}
 			}
-		},
+		},*/
 		templateUrl : 'success.html' 
 	})	
 	.otherwise({
@@ -24,13 +24,11 @@ app.config( function( $routeProvider ) {
 
 app.controller('test', function( $scope , $location , $rootScope , $http ){
 	$scope.submit = function(){
-
 		var data = {
 			userId : $scope.username ,
 			password : $scope.password ,
 			deviceId : '0'
 		}
-		
 		$http.post ( 'http://54.251.44.26:4009/api/login' , data )
 			.then(function(res){
 				console.log(res.data.result_code , "   " , res.data.role);
